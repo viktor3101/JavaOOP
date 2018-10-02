@@ -10,7 +10,7 @@ public class Rectangles {
         rectangleArrayList.add(rectangle);
     }
 
-    public double summary() {
+    public double summarySquare() {
         double temp = 0.0;
         for (Rectangle rectangle : rectangleArrayList) {
             temp += rectangle.s();
@@ -18,14 +18,16 @@ public class Rectangles {
         return temp;
     }
 
-    public void rectArrayList(Rectangles rectangles, String n, Scanner scanner) {
-        while (n != "n") {
+    public void rectArrayList(Rectangles rectangles, Scanner scanner) {
+        String n = "yes";
+        while (n.equals("yes") || n.equals("Yes")) {
             System.out.println("input rectangle(height  width): ");
             double height = scanner.nextDouble();
             double width = scanner.nextDouble();
             Rectangle rectangle = new Rectangle(height, width);
             rectangles.addRectangle(rectangle);
-            System.out.println("Wanna add one more(y/n)? ");
+            System.out.println("Perimeter: " + rectangle.p());
+            System.out.println("Wanna add one more(yes/no)? ");
             n = scanner.next();
         }
     }

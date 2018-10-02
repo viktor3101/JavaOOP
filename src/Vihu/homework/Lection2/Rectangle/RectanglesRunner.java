@@ -7,11 +7,11 @@ public class RectanglesRunner {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Rectangles rectangles = new Rectangles();
-        String n = "y";
-        rectangles.rectArrayList(rectangles, n, scanner);
+        rectangles.rectArrayList(rectangles, scanner);
 
-        System.out.println("Summary square: " + rectangles.summary());
+        System.out.println("Summary square: " + rectangles.summarySquare());
+
+
+
     }
-
-
 }
